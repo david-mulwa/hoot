@@ -8,6 +8,7 @@ import Login from "./Login";
 import Signup from "./Signup";
 import Forget from "./Forget";
 import Verify from "./Verify";
+import "../../global.css"
 
 const Stack = createNativeStackNavigator();
 

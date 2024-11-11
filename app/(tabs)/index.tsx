@@ -6,7 +6,11 @@ const index = () => {
   const Router = useRouter()
   return (
     <View className='flex-1 items-center justify-center '>
-      <Text>index</Text>
+      <TouchableOpacity
+        onPress={() => {Router.push('/(auth)/Login') }}
+      >
+        <Text>log in</Text>
+      </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {Router.push('/(auth)/Welcome') }}
       >
