@@ -48,9 +48,11 @@ const AuthLayout = () => {
                 name="Verify"
                 component={Verify}
                 options={{
-                    headerShown: false
+                    headerShown: false,
+                    headerTitle:'',
                 }}
             />
         </Stack.Navigator>
     )
 }
+export default AuthLayout
