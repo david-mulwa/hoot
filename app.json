@@ -31,6 +31,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "e48ea028-6623-4bd7-a382-6e364ebd3ff6"
+      }
+    },
+    "owner": "mulwakitonga"
   }
 }
