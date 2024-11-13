@@ -12,11 +12,11 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#ef4444',
+        tabBarActiveTintColor: '#FF566A',
         
         tabBarStyle: {
           borderTopWidth: 1,
-          borderTopColor: '#ef4444',
+          borderTopColor: '#FF566A',
           padding:10,
           height:75,
           paddingBottom:15
@@ -32,7 +32,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name="home-outline"
-              color={focused ? '#ef4444' : color}
+              color={focused ? '#FF566A' : color}
             />
           ),
         }}
@@ -45,7 +45,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name="locate-outline"
-              color={focused ? '#ef4444' : color}
+              color={focused ? '#FF566A' : color}
             />
           ),
         }}
@@ -60,7 +60,7 @@ export default function TabLayout() {
               name="navigate-outline"
               color="white"              
               style={{
-                backgroundColor:  '#ef4444' ,
+                backgroundColor:  '#FF566A' ,
                 borderRadius: 100, 
                 padding: 28,
                 position: 'absolute',
@@ -78,7 +78,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name="chatbubble-outline"
-              color={focused ? '#ef4444' : color}
+              color={focused ? '#FF566A' : color}
             />
           ),
         }}
@@ -91,7 +91,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name="person-outline"
-              color={focused ? '#ef4444' : color}
+              color={focused ? '#FF566A' : color}
             />
           ),
         }}

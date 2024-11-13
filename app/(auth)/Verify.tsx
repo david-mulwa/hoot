@@ -71,13 +71,13 @@ const Verify = () => {
               height: 75,
             }}
             className={`drop-shadow-sm space-x-6 text-center text-2xl rounded-lg mx-4 ${
-              focusedIndex === index ? 'bg-green-400' : 'bg-white'
+              focusedIndex === index ? 'bg-emerald-300' : 'bg-white'
             }`}
           />
         ))}
       </View>
       
-      <View className="mt-12 w-full p-5 items-center justify-center bg-red-500 rounded-2xl ">
+      <View className="mt-12 w-full p-5 items-center justify-center bg-[#FF566A] rounded-2xl ">
         <TouchableOpacity
           onPress={handleVerification}  
           className=''        

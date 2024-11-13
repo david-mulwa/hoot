@@ -23,16 +23,16 @@ const Welcome = () => {
         {/* Logo */}
         <View className='flex-1 items-center justify-center'>
           <Image
-            source={require('../../assets/images/react-logo.png')} // Replace with your logo image
+            source={require('../../assets/images/react-logo.png')} 
             style={{ width: 150, height: 150 }}
             resizeMode='contain'
           />
         </View>
 
-        {/* Get Started Button */}
+        
         <TouchableOpacity
           onPress={() => router.push('/(auth)/Login')}
-          className='absolute bottom-10 w-3/4 p-3 bg-red-500 rounded-full items-center'
+          className='absolute bottom-10 w-3/4 p-3 bg-[#FF566A] rounded-full items-center'
         >
           <Text className='text-white text-2xl'>Get Started</Text>
         </TouchableOpacity>
