@@ -17,7 +17,7 @@ const Welcome = () => {
           className='absolute top-0 left-0 right-0 bottom-0 opacity-20'
         />
 
-        {/* Blue overlay */}
+        {/*overlay*/}        
         <View className='absolute inset-0 bg-blue-500 opacity-30' />
 
         {/* Logo */}
