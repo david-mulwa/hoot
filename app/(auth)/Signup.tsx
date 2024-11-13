@@ -128,7 +128,7 @@ const Signup = () => {
           {/* Add button overlay */}
           <TouchableOpacity
             onPress={handleImageSelection}
-            className='absolute bottom right-0 bg-red-500 rounded-full p-2'
+            className='absolute bottom right-0 bg-[#FF566A] rounded-full p-2'
             
           >
             <Ionicons name="add" size={24} color="white" />
@@ -245,20 +245,20 @@ const Signup = () => {
             <Text className='text-lg text-balance text-gray-700'>
               By continuing, I confirm that I have read and agree to the {}  
               <Link
-                className='text-red-400 space-x-3'
+                className='text-[#FF566A] space-x-3'
                href={"https://reactnative.dev/docs/linking"}>
                Terms and Condtions 
               </Link> 
                  {} and  {}  
               <Link
-              className='text-red-400 space-x-3' 
+              className='text-[#FF566A] space-x-3' 
               href={'https://reactnative.dev/docs/linking'}>
               Privacy Policy
               </Link>
             </Text>
           </View>
 
-          <View className='w-full bg-red-500 rounded-xl p-5 mt-7 items-center justify-center'>
+          <View className='w-full bg-[#FF566A] rounded-xl p-5 mt-7 items-center justify-center'>
             <TouchableOpacity onPress={handleSignUp}>
               <Text className='text-white font-bold text-2xl '>Sign Up</Text>
             </TouchableOpacity>
@@ -268,7 +268,7 @@ const Signup = () => {
             <TouchableOpacity
               onPress={()=>router.push('/(auth)/Login')}
             >
-              <Ionicons name='arrow-forward' size={24} color={"red"}/>
+              <Ionicons name='arrow-forward' size={24} color={"#FF566A"}/>
             </TouchableOpacity>
           </View>
         </KeyboardAvoidingView>

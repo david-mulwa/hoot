@@ -63,7 +63,7 @@ const Forget = () => {
             </Text>
           </View>
 
-          <View className={`mt-4 border p-3 rounded-2xl  ${isValidEmail ? 'border-gray-300' : 'border-red-500'}`}>
+          <View className={`mt-4 border p-3 rounded-2xl  ${isValidEmail ? 'border-gray-300' : 'border-[#FF566A]'}`}>
             <Text className="text-gray-400 font-medium mb-2">Email Address</Text>
             <View
               className={`w-full  px-4   rounded-md  flex-row items-center`}
@@ -87,7 +87,7 @@ const Forget = () => {
           {/* Submit Button */}
           <TouchableOpacity
             onPress={()=>handleSubmit}
-            className="mt-6 w-full p-5 bg-red-500 rounded-md items-center justify-center"
+            className="mt-6 w-full p-5 bg-[#FF566A] rounded-md items-center justify-center"
           >
             <Text className="text-white text-lg font-bold">SEND</Text>
           </TouchableOpacity>

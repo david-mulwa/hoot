@@ -68,7 +68,7 @@ const Login = () => {
                         />
                     </View>
                     {validatePhoneNumber(phone) ? (
-                            <Ionicons name="checkmark" size={24} color="green" className='mr-2 ' />
+                            <Ionicons name="checkmark" size={24} color="#6ee7b7" className='mr-2 ' />
                         ) : null}
                 </View>
 
@@ -87,13 +87,13 @@ const Login = () => {
                     className='flex-row space-x-3 items-center mt-2 justify-end '
                 >
                     <Text className='text-black font-semibold text-xl'>Forget your password? </Text>
-                    <Ionicons name="arrow-forward" size={24} color="green" />
+                    <Ionicons name="arrow-forward" size={24} color="#6ee7b7" />
                 </TouchableOpacity>
             </View>
 
             <TouchableOpacity
                 onPress={()=>{handleLogin}}
-                className=' p-5 bg-red-500 mt-12 items-center justify-center  rounded-xl w-full  '
+                className=' p-5 bg-[#FF566A] mt-12 items-center justify-center  rounded-xl w-full  '
             >
                 <Text className='text-white text-2xl font-bold'>LOGIN</Text>
             </TouchableOpacity>
@@ -123,7 +123,7 @@ const Login = () => {
             </View>
 
             {/*signup*/}
-            <View className='mt-9 flex-row items-center justify-center '>
+            <View className='mt-7 flex-row items-center justify-center '>
                 <View>
                    <Text className='text-lg font-bold mt-1 '>Don't have an account?</Text>
                 </View>
@@ -133,7 +133,7 @@ const Login = () => {
                     className='flex-row space-x-3 items-end mt-2 justify-center '
                 >
                     
-                    <Ionicons name="arrow-forward" size={24} className='tetx-red-500' />
+                    <Ionicons name="arrow-forward" size={24} className='text-[#FF566A]' />
                   </TouchableOpacity>
                 </View>
                 
