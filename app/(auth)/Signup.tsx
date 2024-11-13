@@ -97,6 +97,7 @@ const Signup = () => {
     <ScrollView className='flex-1 p-3 '>
       
         <KeyboardAvoidingView className='items-center justify-center mt-6'>
+          <Text className='mb-6 mt-2 text-4xl font-bold '>Sign Up</Text>
           <View style={{ position: 'relative' }}>
           <TouchableOpacity
             onPress={handleImageSelection}

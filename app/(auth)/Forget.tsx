@@ -25,28 +25,45 @@ const Forget = () => {
       setSnackbarVisible(true);  
       router.push('/(auth)/Login');
     }
+    router.replace('/(auth)/Login')
   };
 
   return (
     
-      <SafeAreaView className='flex-1 flex-col justify-center p-3 '
+      <SafeAreaView className='flex-1 flex-col  p-3 '
         >
-        <KeyboardAvoidingView className='items-center justify-center'>
-          <View className='mb-6'>
+          <View className=' flex-row items-center justify-between mt-12 '>
+                <View >
+                   <TouchableOpacity
+                    onPress={()=>router.push('/(auth)/Login')}
+                    className='bg-white rounded-full p-2 '
+                   >  
+                      <Ionicons name='chevron-back' color='black' size={24}/>
+                   </TouchableOpacity>
+                </View>
+                <View>
+                    <Text className='text-center text-4xl font-bold '>Forgot Password</Text>
+                </View>
+                <View>
+                    {}
+                </View>
+        </View>
+        <KeyboardAvoidingView className='items-center justify-center '>
+          <View className='mb-6 mt-12'>
             <Image
               source={require('../../assets/images/react-logo.png')}
               style={{ width: 160, height: 160, resizeMode: 'contain' }}
             />
           </View>
 
-          <View className='items-center justify-center flex-col ' >
-            <Text className="text-4xl text-black font-bold">Forgot Password</Text>
-            <Text className="mt-3 font-normal text-xl text-gray-700 leading-6 text-center">
+          <View className='items-center justify-center flex-col mt-4 ' >
+            <Text className="text-4xl text-black font-bold mt-4 ">Forgot Password</Text>
+            <Text className="mt-4 p-5 font-normal text-xl text-gray-700 leading-6 text-center">
               Please, enter your email address. You will receive a link to create a new password via email.
             </Text>
           </View>
 
-          <View className={`mt-9 border p-3 rounded-2xl  ${isValidEmail ? 'border-gray-300' : 'border-red-500'}`}>
+          <View className={`mt-4 border p-3 rounded-2xl  ${isValidEmail ? 'border-gray-300' : 'border-red-500'}`}>
             <Text className="text-gray-400 font-medium mb-2">Email Address</Text>
             <View
               className={`w-full  px-4   rounded-md  flex-row items-center`}

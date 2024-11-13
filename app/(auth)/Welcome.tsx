@@ -17,8 +17,8 @@ const Welcome = () => {
           className='absolute top-0 left-0 right-0 bottom-0 opacity-20'
         />
 
-        {/*overlay* to create a light blu/}        
-        <View className='absolute inset-0 bg-blue-500 opacity-30' />
+        {/*overlay to create a light blue*/}        
+        <View className='absolute inset-0 bg-blue-500 opacity-0' />
 
         {/* Logo */}
         <View className='flex-1 items-center justify-center'>
