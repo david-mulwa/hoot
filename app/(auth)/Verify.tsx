@@ -1,6 +1,7 @@
 import { View, Text, ScrollView, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
 import React, { useRef, useState } from 'react';
 import { useRouter } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
 
 const Verify = () => {
@@ -32,11 +33,26 @@ const Verify = () => {
   }
 
   return (
-    <SafeAreaView className='flex-1  items-center  p-3 justify-center'>
-
+    <SafeAreaView className='flex-1  items-center  p-3 mt-1'>
+      <View className='mt-7  flex-row items-center justify-between w-full  '>
+                <View >
+                   <TouchableOpacity
+                    onPress={()=>router.push('/(auth)/Signup')}
+                    className='bg-white rounded-full p-2 '
+                   >  
+                      <Ionicons name='chevron-back' color='black' size={24}/>
+                   </TouchableOpacity>
+                </View>
+                <View>
+                    <Text className='text-center text-4xl font-bold '>Verification</Text>
+                </View>
+                <View>
+                    {}
+                </View>
+        </View>
+    <View className=' items-center justify-center flex-1 p-3 w-full'>   
     
-    
-      <Text className="text-4xl font-bold text-black">Verify your account</Text>
+      <Text className="text-4xl font-bold  text-black">Verify your account</Text>
       <Text className="text-center mt-3 mb-12 text-gray-600 text-lg ">We have sent a 4-digit code to your phone</Text>
       
       <View className="flex-row justify-between mt-8 mb-8">
@@ -68,6 +84,8 @@ const Verify = () => {
         >
           <Text className="text-center text-white font-bold text-2xl">Verify</Text>
         </TouchableOpacity>
+      </View>
+
       </View>
     
     </SafeAreaView>

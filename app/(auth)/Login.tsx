@@ -26,11 +26,28 @@ const Login = () => {
     }
 
   return (
-    <ScrollView>
-        <KeyboardAvoidingView className='p-3 w-full  flex-1 items-center justify-center'>
+    <ScrollView className='p-3'>
+        <View className='mt-9  flex-row items-center justify-between w-full'>
+                <View >
+                   <TouchableOpacity
+                    onPress={()=>router.push('/(auth)/Signup')}
+                    className='bg-white rounded-full p-2 '
+                   >  
+                      <Ionicons name='chevron-back' color='black' size={24}/>
+                   </TouchableOpacity>
+                </View>
+                <View>
+                    <Text className='text-center text-4xl font-bold '>Login</Text>
+                </View>
+                <View>
+                    {}
+                </View>
+        </View>
+        <KeyboardAvoidingView className=' w-full  flex-1 items-center justify-center'>
+            
             
             {/*logo*/}
-            <View className='mt-12  '>
+            <View className='mt-6'>
                 <Image
                     source={require('../../assets/images/react-logo.png')}
                     className='w-40 h-40'
@@ -108,7 +125,7 @@ const Login = () => {
             {/*signup*/}
             <View className='mt-9 flex-row items-center justify-center '>
                 <View>
-                   <Text className='text-lg font-bold mt-4 '>Don't have an account?</Text>
+                   <Text className='text-lg font-bold mt-1 '>Don't have an account?</Text>
                 </View>
                 <View>
                     <TouchableOpacity
