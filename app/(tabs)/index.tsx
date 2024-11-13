@@ -49,7 +49,7 @@ const Index = () => {
         pathname: '/(screens)/PlaceOrderScreen',
         params: { type: selectedType, service: item.name },
       });
-    }, 1000); // Simulate the delay to highlight the service before navigation
+    }, 1000); 
   };
 
   const renderService = ({ item }: { item: { id: number; name: string; image: any } }) => (
@@ -72,7 +72,7 @@ const Index = () => {
         <Ionicons
           name="chevron-forward-outline"
           size={24}
-          color="#FFF"
+          color={selectedService === item.id ? '#FF566A' : '#ffffff'}
           className={`mx-6 -bottom-5 rounded-full p-2 ${selectedService === item.id ? 'bg-white' : 'bg-[#FF566A]'}`}
         />
       </View>
