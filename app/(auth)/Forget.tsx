@@ -28,34 +28,35 @@ const Forget = () => {
   };
 
   return (
-    <SafeAreaView className="flex-1 items-center justify-center p-3">
-      <ScrollView contentContainerStyle={{ alignItems: 'center' }}>
-        <KeyboardAvoidingView behavior="padding" className="w-full">
-          <View className="mt-12 items-center">
+    
+      <SafeAreaView className='flex-1 flex-col justify-center p-3 '
+        >
+        <KeyboardAvoidingView className='items-center justify-center'>
+          <View className='mb-6'>
             <Image
               source={require('../../assets/images/react-logo.png')}
               style={{ width: 160, height: 160, resizeMode: 'contain' }}
             />
           </View>
 
-          <View className="mt-6 px-4 text-center">
+          <View className='items-center justify-center flex-col ' >
             <Text className="text-4xl text-black font-bold">Forgot Password</Text>
-            <Text className="mt-2 font-normal text-lg text-gray-600 leading-6 text-center">
+            <Text className="mt-3 font-normal text-xl text-gray-700 leading-6 text-center">
               Please, enter your email address. You will receive a link to create a new password via email.
             </Text>
           </View>
 
-          <View className="mt-7 w-full px-4">
-            <Text className="text-gray-700 font-medium mb-2">Email Address</Text>
+          <View className={`mt-9 border p-3 rounded-2xl  ${isValidEmail ? 'border-gray-300' : 'border-red-500'}`}>
+            <Text className="text-gray-400 font-medium mb-2">Email Address</Text>
             <View
-              className={`w-full h-12 px-4 border ${isValidEmail ? 'border-gray-300' : 'border-red-500'} rounded-md bg-white flex-row items-center`}
+              className={`w-full  px-4   rounded-md  flex-row items-center`}
             >
               <TextInput
                 value={email}
                 onChangeText={handleEmailChange}
                 keyboardType="email-address"
-                placeholder="Enter your email"
-                className="flex-1 text-lg text-gray-800"
+                placeholder=""
+                className="flex-1 text-lg font-bold text-gray-800"
               />
               {email ? (
                 <TouchableOpacity onPress={() => setEmail('')}>
@@ -63,20 +64,18 @@ const Forget = () => {
                 </TouchableOpacity>
               ) : null}
             </View>
-            {!isValidEmail && (
-              <Text className="text-red-500 text-sm mt-1">Please enter a valid email address</Text>
-            )}
+            
           </View>
 
           {/* Submit Button */}
           <TouchableOpacity
-            onPress={handleSubmit}
+            onPress={()=>handleSubmit}
             className="mt-6 w-full p-5 bg-red-500 rounded-md items-center justify-center"
           >
             <Text className="text-white text-lg font-bold">SEND</Text>
           </TouchableOpacity>
         </KeyboardAvoidingView>
-      </ScrollView>
+      
 
       {/* Snackbar */}
       <Snackbar
@@ -86,7 +85,8 @@ const Forget = () => {
       >
         Check your email for a password reset link.
       </Snackbar>
-    </SafeAreaView>
+      </SafeAreaView>
+    
   );
 };
 

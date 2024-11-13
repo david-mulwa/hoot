@@ -17,6 +17,23 @@ const index = () => {
         <Text>Welcome</Text>
       </TouchableOpacity>
 
+      <TouchableOpacity
+        onPress={() => {Router.push('/(auth)/Signup') }}
+      >
+        <Text>sign up</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => {Router.push('/(auth)/Verify') }}
+      >
+        <Text>Verify</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {Router.push('/(auth)/Forget') }}
+      >
+        <Text>Forget</Text>
+      </TouchableOpacity>
+
     </View>
   )
 }

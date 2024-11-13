@@ -30,7 +30,7 @@ const Login = () => {
         <KeyboardAvoidingView className='p-3 w-full  flex-1 items-center justify-center'>
             
             {/*logo*/}
-            <View className='mt-8  '>
+            <View className='mt-12  '>
                 <Image
                     source={require('../../assets/images/react-logo.png')}
                     className='w-40 h-40'
@@ -85,8 +85,8 @@ const Login = () => {
             <Text className='text-2xl font-bold mt-6 '>or login with social account</Text>
 
 
-            <View className=' flex-row items-center space-x-4  '>
-                <View className='bg-white shadow-blur-sm shadow-white p-3 rounded-xl'>
+            <View className=' flex-row items-center space-x-4 mt-7 justify-between '>
+                <View className='bg-white shadow-blur-sm shadow-white p-3 rounded-xl mx-6 '>
                    <TouchableOpacity
                 onPress={()=>{handleLoginWithFaceBook}}
                 className=' p-3 rounded-xl'
@@ -95,26 +95,31 @@ const Login = () => {
                 </TouchableOpacity>
                 </View>
 
-                <View className='bg-white shadow-blur-sm shadow-white p-3 rounded-xl'>
+                <View className='bg-white shadow-blur-sm shadow-white p-3 rounded-xl mx-6 '>
                 <TouchableOpacity
                     onPress={()=>{handleLoginWithGoogle}}
                     className=' p-3 rounded-xl'
                 >
-                    <Ionicons name="logo-google" size={50} color="red" />
+                    <Ionicons name="logo-google" size={50} color="blue" />
                 </TouchableOpacity>
                 </View>
             </View>
 
             {/*signup*/}
-            <View className='mt-12 flex-row items-center justify-center '>
-                <Text className='text-lg font-bold mt-4 '>Don't have an account?</Text>
-                <TouchableOpacity
+            <View className='mt-9 flex-row items-center justify-center '>
+                <View>
+                   <Text className='text-lg font-bold mt-4 '>Don't have an account?</Text>
+                </View>
+                <View>
+                    <TouchableOpacity
                     onPress={()=>{router.push('/(auth)/Signup')}}
                     className='flex-row space-x-3 items-end mt-2 justify-center '
                 >
                     
                     <Ionicons name="arrow-forward" size={24} className='tetx-red-500' />
-                </TouchableOpacity>
+                  </TouchableOpacity>
+                </View>
+                
             </View>
         </KeyboardAvoidingView>
     </ScrollView>

@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
 import React, { useRef, useState } from 'react';
 import { useRouter } from 'expo-router';
 
@@ -32,11 +32,14 @@ const Verify = () => {
   }
 
   return (
-    <ScrollView className="flex-1 items-center justify-center">
+    <SafeAreaView className='flex-1  items-center  p-3 justify-center'>
+
+    
+    
       <Text className="text-4xl font-bold text-black">Verify your account</Text>
-      <Text className="text-center mt-2 mb-8 text-gray-600">We have sent a 4-digit code to your phone</Text>
+      <Text className="text-center mt-3 mb-12 text-gray-600 text-lg ">We have sent a 4-digit code to your phone</Text>
       
-      <View className="flex-row justify-between w-3/5">
+      <View className="flex-row justify-between mt-8 mb-8">
         {code.map((digit, index) => (
           <TextInput
             key={index}
@@ -47,22 +50,27 @@ const Verify = () => {
             onBlur={() => setFocusedIndex(null)}
             keyboardType="number-pad"
             maxLength={1}
-            className={`w-12 h-12 border border-gray-400 text-center text-2xl rounded-lg mx-1 ${
+            style={{
+              width: 75,
+              height: 75,
+            }}
+            className={`drop-shadow-sm space-x-6 text-center text-2xl rounded-lg mx-4 ${
               focusedIndex === index ? 'bg-green-400' : 'bg-white'
             }`}
           />
         ))}
       </View>
       
-      <View className="mt-7 w-full px-5">
+      <View className="mt-12 w-full p-5 items-center justify-center bg-red-500 rounded-2xl ">
         <TouchableOpacity
-          onPress={handleVerification}
-          
+          onPress={handleVerification}  
+          className=''        
         >
-          <Text className="text-center text-white font-bold">Verify</Text>
+          <Text className="text-center text-white font-bold text-2xl">Verify</Text>
         </TouchableOpacity>
       </View>
-    </ScrollView>
+    
+    </SafeAreaView>
   );
 };
 

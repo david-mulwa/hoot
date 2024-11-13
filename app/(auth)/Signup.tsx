@@ -4,6 +4,8 @@ import * as ImagePicker from 'expo-image-picker';
 import { Ionicons } from '@expo/vector-icons';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { Link, useRouter } from 'expo-router';
+import 'react-native-get-random-values';
+
 
 
 const Signup = () => {
@@ -92,9 +94,10 @@ const Signup = () => {
   } 
 
   return (
-    <SafeAreaView className='flex-1 items-center p-3 justify-center'>
-      <ScrollView>
-        <KeyboardAvoidingView>
+    <ScrollView className='flex-1 p-3 '>
+      
+        <KeyboardAvoidingView className='items-center justify-center mt-6'>
+          <View style={{ position: 'relative' }}>
           <TouchableOpacity
             onPress={handleImageSelection}
             style={{
@@ -119,32 +122,30 @@ const Signup = () => {
             ) : (
               <Ionicons name="person-outline" size={60} color="gray" />
             )}
-            <View
-              style={{
-                position: 'absolute',
-                bottom: -5,
-                right: -5,
-                backgroundColor: 'white',
-                borderRadius: 15,
-                padding: 2,
-              }}
-            >
-              <Ionicons name="add-circle" size={24} color="red" />
-            </View>
-
           </TouchableOpacity>
-          <Text className='font-bold text-lg text-black mt-5 '>Upload Picture</Text>
+
+          {/* Add button overlay */}
+          <TouchableOpacity
+            onPress={handleImageSelection}
+            className='absolute bottom right-0 bg-red-500 rounded-full p-2'
+            
+          >
+            <Ionicons name="add" size={24} color="white" />
+          </TouchableOpacity>
+        </View>
+          <Text className='font-bold text-2xl text-black mt-3 mb-3 '>Upload Picture</Text>
 
           <View className='w-full'>
-              <View className='w-full flex-row justify-between items-center my-2 border border-gray-300 rounded-md px-4 bg-white p-2'>
-                <Text className='text-gray-400 font-normal text-lg '>First Name</Text>
+              <View className=' border-gray-300 rounded-lg  bg-white px-3'>
+                <Text className='text-gray-400 font-normal mt-1'>First Name</Text>
                 <TextInput
+                  placeholder=''                  
                   value={firstName}
                   onChangeText={setFirstName}
-                  className='mt-1 text-2xl font-semibold'
+                  className='mt-1 mb-1 text-2xl font-semibold'
                 />
               </View>
-              <View className='w-full flex-row justify-between items-center my-2 border border-gray-300 rounded-md px-4 bg-white p-2'>
+              <View className=' border-gray-300 rounded-lg  bg-white px-3  mt-3'>
                 <Text className='text-gray-400 font-normal text-lg '>Last Name</Text>
                 <TextInput
                   value={secondName}
@@ -152,7 +153,7 @@ const Signup = () => {
                   className='mt-1 text-2xl font-semibold'
                 />
               </View>
-              <View className='w-full flex-row justify-between items-center my-2 border border-gray-300 rounded-md px-4 bg-white p-2'>
+              <View className=' border-gray-300 rounded-lg  bg-white px-3 mt-3'>
                 <Text className='text-gray-400 font-normal text-lg '>Mobile Number</Text>
                 <TextInput
                   value={phone}
@@ -160,10 +161,10 @@ const Signup = () => {
                   className='mt-1 text-2xl font-semibold'
                 />
               </View>
-              <View className='w-full flex-row justify-between items-center my-2 border border-gray-300 rounded-md px-4 bg-white p-2'>
-                <View className='flex-row justify-center'>
+              <View className=' border-gray-300 rounded-lg  bg-white px-3 mt-3'>
+                <View className='flex-row items-center '>
                   <Text className='text-gray-400 font-normal text-lg '>City</Text>
-                  <Ionicons name='arrow-down' size={24} color={'gray'}/>
+                  <Ionicons name='chevron-down' size={24} color={'gray'}/>
                 </View>
                 <GooglePlacesAutocomplete
                   placeholder=''
@@ -178,14 +179,12 @@ const Signup = () => {
                   }}
                   styles={{
                     textInput:{
-                      borderBottomWidth: 1,
-                      borderColor: 'gray',
-                      marginBottom:10,
+                      borderColor: 'gray',                      
                     }
                   }}
                 />          
               </View>
-              <View className='w-full flex-row justify-between items-center my-2 border border-gray-300 rounded-md px-4 bg-white p-2'>
+              <View className=' border-gray-300 rounded-lg  bg-white px-3  mt-3'>
                 
                   <Text className='text-gray-400 font-normal text-lg '>Home Address</Text>
                                   
@@ -201,15 +200,13 @@ const Signup = () => {
                     
                   }}
                   styles={{
-                    textInput:{
-                      borderBottomWidth: 1,
-                      borderColor: 'gray',
-                      marginBottom:10,
+                    textInput:{                      
+                      borderColor: 'gray',                      
                     }
                   }}
                 />          
               </View>
-              <View className='w-full flex-row justify-between items-center my-2 border border-gray-300 rounded-md px-4 bg-white p-2'>
+              <View className=' border-gray-300 rounded-lg  bg-white px-3  mt-3'>
                 
                   <Text className='text-gray-400 font-normal text-lg '>Home Address 2</Text>
                                   
@@ -225,16 +222,14 @@ const Signup = () => {
                     
                   }}
                   styles={{
-                    textInput:{
-                      borderBottomWidth: 1,
-                      borderColor: 'gray',
-                      marginBottom:10,
+                    textInput:{                      
+                      borderColor: 'gray',                      
                     }
                   }}
                 />          
               </View>
 
-              <View className='w-full flex-row justify-between items-center my-2 border border-gray-300 rounded-md px-4 bg-white p-2'>
+              <View className=' border-gray-300 rounded-lg  bg-white px-3  mt-3'>
                 <Text className='text-gray-400 font-normal text-lg '>Password</Text>
                 <TextInput
                   value={password}
@@ -247,16 +242,16 @@ const Signup = () => {
 
           <View>
             <Text className='text-lg text-balance text-gray-700'>
-              By continuining, I confirm that I have read and agree to the 
+              By continuing, I confirm that I have read and agree to the {}  
               <Link
-                className='text-red-500'
-               href={"file:///C:/Users/mulwa/Downloads/Delivery%20Logistics%20App%20(Community)%20(1).pdf"}>
-              Terms and Condtions
+                className='text-red-400 space-x-3'
+               href={"https://reactnative.dev/docs/linking"}>
+               Terms and Condtions 
               </Link> 
-              and 
+                 {} and  {}  
               <Link
-              className='text-red-500' 
-              href={"file:///C:/Users/mulwa/Downloads/Delivery%20Logistics%20App%20(Community)%20(1).pdf"}>
+              className='text-red-400 space-x-3' 
+              href={'https://reactnative.dev/docs/linking'}>
               Privacy Policy
               </Link>
             </Text>
@@ -267,7 +262,7 @@ const Signup = () => {
               <Text className='text-white font-bold text-2xl '>Sign Up</Text>
             </TouchableOpacity>
           </View>
-          <View className='flex-row items-center justify-center space-x-3'>
+          <View className='flex-row items-center justify-center space-x-3 mb-6'>
             <Text className='text-lg font-normal text-black'>Already have an account? </Text>
             <TouchableOpacity
               onPress={()=>router.push('/(auth)/Login')}
@@ -276,8 +271,8 @@ const Signup = () => {
             </TouchableOpacity>
           </View>
         </KeyboardAvoidingView>
-      </ScrollView>
-    </SafeAreaView>
+      
+    </ScrollView>
   );
 };
 
