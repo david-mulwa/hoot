@@ -7,6 +7,12 @@
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "doctor":{
+      "reactNativeDirectoryCheck":{
+        "exclude": ["react-redux"]
+      }
+    },
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
