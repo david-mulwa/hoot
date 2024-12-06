@@ -1,0 +1,29 @@
+{
+    "project_info": {
+      "project_number": "564364953230",
+      "project_id": "hoot-34aa7",
+      "storage_bucket": "hoot-34aa7.firebasestorage.app"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:564364953230:android:04035e5a6954c6c28debdf",
+          "android_client_info": {
+            "package_name": "hootapp.logistics"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyD9oVwfpU2MIEZ1XL2tfaW9qar9-LwCV7E"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
